@@ -32,7 +32,7 @@
 							<a href="#" >Home</a>
 						</li>
 						<li class="controller">
-							<a href="#" >Templates</a>
+							<a href="${createLink(controller:'template',action: 'index')}" >Templates</a>
 						</li>
 						<li class="controller">
 							<a href="#" >Custom Categories</a>
