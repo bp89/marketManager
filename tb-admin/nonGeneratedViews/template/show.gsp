@@ -15,41 +15,38 @@
 
 	<table class="table">
 		<tbody>
-		
-			<tr class="prop">
-				<td valign="top" class="name"><g:message code="template.attachments.label" default="Attachments" /></td>
-				
-				<td valign="top" style="text-align: left;" class="value">
-					<ul>
+
+		<tr class="prop">
+			<td valign="top" class="name"><g:message code="template.name.label" default="Name" /></td>
+			<td valign="top" class="value">${fieldValue(bean: templateInstance, field: "name")}</td>
+
+		</tr>
+
+		<tr class="prop">
+			<td valign="top" class="name"><g:message code="template.subject.label" default="Subject" /></td>
+
+			<td valign="top" class="value">${fieldValue(bean: templateInstance, field: "subject")}</td>
+
+		</tr>
+
+		<tr class="prop">
+			<td valign="top" class="name"><g:message code="template.content.label" default="Content" /></td>
+
+			<td valign="top" class="value">${fieldValue(bean: templateInstance, field: "content")}</td>
+		</tr>
+
+		<tr class="prop">
+			<td valign="top" class="name"><g:message code="template.attachments.label" default="Attachments" /></td>
+
+			<td valign="top" style="text-align: left;" class="value">
+				<ul>
 					<g:each in="${templateInstance.attachments}" var="a">
 						<li><g:link controller="attachement" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
 					</g:each>
-					</ul>
-				</td>
-				
-			</tr>
-		
-			<tr class="prop">
-				<td valign="top" class="name"><g:message code="template.content.label" default="Content" /></td>
-				
-				<td valign="top" class="value">${fieldValue(bean: templateInstance, field: "content")}</td>
-				
-			</tr>
-		
-			<tr class="prop">
-				<td valign="top" class="name"><g:message code="template.name.label" default="Name" /></td>
-				
-				<td valign="top" class="value">${fieldValue(bean: templateInstance, field: "name")}</td>
-				
-			</tr>
-		
-			<tr class="prop">
-				<td valign="top" class="name"><g:message code="template.subject.label" default="Subject" /></td>
-				
-				<td valign="top" class="value">${fieldValue(bean: templateInstance, field: "subject")}</td>
-				
-			</tr>
-		
+				</ul>
+			</td>
+
+		</tr>
 		</tbody>
 	</table>
 </section>

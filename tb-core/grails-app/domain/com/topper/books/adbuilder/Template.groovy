@@ -9,4 +9,8 @@ class Template {
     String content
 
     static hasMany = [attachments:Attachement]
+
+    static mapping = {
+        content type: 'text'
+    }
 }
