@@ -8,6 +8,12 @@ log4j = {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
 
+    grails.config.locations = ["classpath:${appName}-config.properties",
+                               "classpath:${appName}-config.groovy",
+                               //"file:${userHome}/.grails/${appName}-config.properties",
+                               "file:${appName}-config.groovy"
+    ]
+
     error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
            'org.codehaus.groovy.grails.web.pages', //  GSP
            'org.codehaus.groovy.grails.web.sitemesh', //  layouts
@@ -19,4 +25,15 @@ log4j = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+
+    debug 'com.odobo',
+            "grails.app.filters",
+            "grails.app.controllers",
+            "grails.app.services",
+            "grails.app.domains",
+            "com.topper.books",
+            "org.apache.shiro",
+            "grails.app.realms"
 }
+
+
