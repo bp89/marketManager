@@ -47,5 +47,6 @@ grails.project.dependency.resolution = {
             export = false
         }
         compile ":shiro:1.2.1"
+        compile ":mail:1.0.7"
     }
 }

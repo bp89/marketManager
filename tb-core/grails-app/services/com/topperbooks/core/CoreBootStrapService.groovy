@@ -2,6 +2,7 @@ package com.topperbooks.core
 
 import com.topper.books.core.User
 import groovy.util.logging.Slf4j
+import org.apache.shiro.crypto.hash.Sha256Hash
 
 /**
  * CoreBootStrapService
@@ -19,7 +20,7 @@ class CoreBootStrapService {
         User user = new User()
 
         user.username = 'admin'
-        user.password = 'admin'
+        user.passwordHash = 'admin'
         user.permissions = ['*.*']
 
         user.validate()
@@ -29,6 +30,10 @@ class CoreBootStrapService {
         }else {
             user.save flush: true
         }
+
+         user = new User(username: "user123", passwordHash: new Sha256Hash("password").toHex())
+        user.addToPermissions("*:*")
+        user.save flush: true
 
     }
 }

@@ -36,4 +36,20 @@ log4j = {
             "grails.app.realms"
 }
 
+grails {
+    mail {
+        host = "smtp.gmail.com"
+        port = 465
+        username = "softiventure@gmail.com"
+        password = "P0t3nt14l"
+        props = ["mail.smtp.auth":"true",
+                 "mail.smtp.socketFactory.port":"465",
+                 "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+                 "mail.smtp.socketFactory.fallback":"false"]
+    }
+
+}
+grails.mail.default.from="softiventure@gmail.com"
+//grails.mail.disabled=true
+grails.mail.poolSize=10
 
