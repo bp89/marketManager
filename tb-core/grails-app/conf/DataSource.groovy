@@ -1,9 +1,8 @@
 dataSource {
     pooled = true
     jmxExport = true
-    driverClassName = "org.h2.Driver"
-    username = "sa"
-    password = ""
+    driverClassName = "com.mysql.jdbc.Driver"
+    dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -17,10 +16,10 @@ hibernate {
 environments {
     development {
         dataSource {
-            username = "tb-db"
-            password = "tb-db"
+            username = "root"
+            password = "root"
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:mysql://localhost:3306/tb-db?autoReconnect=true"
+            url = "jdbc:mysql://localhost:3306/tb_db?autoReconnect=true"
         }
     }
     test {
@@ -28,7 +27,7 @@ environments {
             username = "tb-db"
             password = "tb-db"
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:mysql://localhost:3306/tb-db?autoReconnect=true"
+            url = "jdbc:mysql://localhost:3306/tb_db?autoReconnect=true"
         }
     }
     production {
@@ -36,7 +35,7 @@ environments {
             username = "tb-db"
             password = "tb-db"
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:mysql://localhost:3306/tb-db?autoReconnect=true"
+            url = "jdbc:mysql://localhost:3306/tb_db?autoReconnect=true"
             properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                jmxEnabled = true
