@@ -1,2 +1,2 @@
 
-${templateInstance.content}
+${raw(templateInstance.content)}

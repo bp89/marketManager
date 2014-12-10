@@ -19,13 +19,15 @@
 			
 				<th><g:message code="contact.address.label" default="Address" /></th>
 			
+				<th><g:message code="contact.category.label" default="Category" /></th>
+			
+				<th><g:message code="contact.contactSource.label" default="Contact Source" /></th>
+			
+				<th><g:message code="contact.contactType.label" default="Contact Type" /></th>
+			
 				<g:sortableColumn property="email" title="${message(code: 'contact.email.label', default: 'Email')}" />
 			
 				<g:sortableColumn property="name" title="${message(code: 'contact.name.label', default: 'Name')}" />
-			
-				<g:sortableColumn property="organisation" title="${message(code: 'contact.organisation.label', default: 'Organisation')}" />
-			
-				<g:sortableColumn property="prefix" title="${message(code: 'contact.prefix.label', default: 'Prefix')}" />
 			
 			</tr>
 		</thead>
@@ -35,13 +37,15 @@
 			
 				<td><g:link action="show" id="${contactInstance.id}">${fieldValue(bean: contactInstance, field: "address")}</g:link></td>
 			
+				<td>${fieldValue(bean: contactInstance, field: "category")}</td>
+			
+				<td>${fieldValue(bean: contactInstance, field: "contactSource")}</td>
+			
+				<td>${fieldValue(bean: contactInstance, field: "contactType")}</td>
+			
 				<td>${fieldValue(bean: contactInstance, field: "email")}</td>
 			
 				<td>${fieldValue(bean: contactInstance, field: "name")}</td>
-			
-				<td>${fieldValue(bean: contactInstance, field: "organisation")}</td>
-			
-				<td>${fieldValue(bean: contactInstance, field: "prefix")}</td>
 			
 			</tr>
 		</g:each>

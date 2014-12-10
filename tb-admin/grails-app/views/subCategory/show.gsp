@@ -16,6 +16,20 @@
 	<table class="table">
 		<tbody>
 		
+			<tr class="prop">
+				<td valign="top" class="name"><g:message code="subCategory.description.label" default="Description" /></td>
+				
+				<td valign="top" class="value">${fieldValue(bean: subCategoryInstance, field: "description")}</td>
+				
+			</tr>
+		
+			<tr class="prop">
+				<td valign="top" class="name"><g:message code="subCategory.name.label" default="Name" /></td>
+				
+				<td valign="top" class="value">${fieldValue(bean: subCategoryInstance, field: "name")}</td>
+				
+			</tr>
+		
 		</tbody>
 	</table>
 </section>

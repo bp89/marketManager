@@ -6,6 +6,8 @@
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'template.label', default: 'Template')}" />
 	<title><g:message code="default.create.label" args="[entityName]" /></title>
+	<uploader:head css="/path/to/your.css" />
+	<uploader:head />
 </head>
 
 <body>

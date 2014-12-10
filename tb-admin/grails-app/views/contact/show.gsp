@@ -24,6 +24,27 @@
 			</tr>
 		
 			<tr class="prop">
+				<td valign="top" class="name"><g:message code="contact.category.label" default="Category" /></td>
+				
+				<td valign="top" class="value"><g:link controller="category" action="show" id="${contactInstance?.category?.id}">${contactInstance?.category?.encodeAsHTML()}</g:link></td>
+				
+			</tr>
+		
+			<tr class="prop">
+				<td valign="top" class="name"><g:message code="contact.contactSource.label" default="Contact Source" /></td>
+				
+				<td valign="top" class="value"><g:link controller="contactSource" action="show" id="${contactInstance?.contactSource?.id}">${contactInstance?.contactSource?.encodeAsHTML()}</g:link></td>
+				
+			</tr>
+		
+			<tr class="prop">
+				<td valign="top" class="name"><g:message code="contact.contactType.label" default="Contact Type" /></td>
+				
+				<td valign="top" class="value"><g:link controller="contactType" action="show" id="${contactInstance?.contactType?.id}">${contactInstance?.contactType?.encodeAsHTML()}</g:link></td>
+				
+			</tr>
+		
+			<tr class="prop">
 				<td valign="top" class="name"><g:message code="contact.email.label" default="Email" /></td>
 				
 				<td valign="top" class="value">${fieldValue(bean: contactInstance, field: "email")}</td>
@@ -41,6 +62,13 @@
 				<td valign="top" class="name"><g:message code="contact.organisation.label" default="Organisation" /></td>
 				
 				<td valign="top" class="value">${fieldValue(bean: contactInstance, field: "organisation")}</td>
+				
+			</tr>
+		
+			<tr class="prop">
+				<td valign="top" class="name"><g:message code="contact.phoneNumber.label" default="Phone Number" /></td>
+				
+				<td valign="top" class="value">${fieldValue(bean: contactInstance, field: "phoneNumber")}</td>
 				
 			</tr>
 		
