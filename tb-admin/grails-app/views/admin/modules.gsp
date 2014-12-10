@@ -203,7 +203,7 @@
 <script src="js/contact_me.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="js/modules.js"></script>
+<script src="js/module.js"></script>
 
 </body>
 

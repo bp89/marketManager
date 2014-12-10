@@ -16,24 +16,24 @@ hibernate {
 environments {
     development {
         dataSource {
-            username = "tb-db"
-            password = "tb-db"
+            username = "root"
+            password = "ruby"
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:mysql://localhost:3306/tb_db?autoReconnect=true"
         }
     }
     test {
         dataSource {
-            username = "tb-db"
-            password = "tb-db"
+            username = "root"
+            password = "ruby"
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:mysql://localhost:3306/tb_db?autoReconnect=true"
         }
     }
     production {
         dataSource {
-            username = "tb-db"
-            password = "tb-db"
+            username = "root"
+            password = "ruby"
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:mysql://localhost:3306/tb_db?autoReconnect=true"
             properties {
