@@ -123,3 +123,24 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+grails.resources.modules = {
+    application {
+        resource url:'/js/application.js'
+    }
+
+    /* prototype {
+         resource url:'/js/prototype.js'
+     }*/
+
+    colorbox{
+        dependsOn 'jquery'
+        resource url: '/js/jquery.colorbox.js'
+        resource url: '/css/colorbox.css'
+    }
+
+}
+
+imageUpload {
+    temporaryFile = '/home/prajapati/Documents/tb-admin.file' // Path to where files will be uploaded
+}

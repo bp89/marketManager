@@ -41,10 +41,9 @@
 			</div>
 			<div class="col-lg-8">
 				<h4> Information </h4>
-				<p>Designed and built with Twitter's <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a>. 
-				Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. 
-				Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-				<p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+				<p>Designed and built by  <a href="http://softiventure.com" target="_blank">SoftIventure</a>.
+				Code licensed under the <a href="http://softiventure.com/code/license" target="_blank">SoftIventure Code Privacy License v1.0</a>.
+				Documentation licensed under <a href="http://softiventure.com/docs/license">SoftIventure Documentation License 1.0</a>.</p>
 			</div>
 		</div>
 		<p class="pull-right"><a href="#">Back to top</a></p>

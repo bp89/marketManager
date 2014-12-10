@@ -35,7 +35,15 @@
 <div class="${hasErrors(bean: templateInstance, field: 'attachments', 'error')} ">
 	<label for="attachments" class="control-label"><g:message code="template.attachments.label" default="Attachments" /></label>
 	<div>
-		<g:select class="form-control" name="attachments" from="${com.topper.books.adbuilder.Attachement.list()}" multiple="multiple" optionKey="id" size="5" value="${templateInstance?.attachments*.id}" class="many-to-many"/>
+		<uploader:uploader id="attachements"  multiple="true" debug="true" >
+			<uploader:onProgress> $('#statusDiv').html('Uploading'+fileName+'...'); </uploader:onProgress>
+			<uploader:onSubmit> $('#statusDiv').html('upload');</uploader:onSubmit>
+			<uploader:onComplete>
+				$('#statusDiv').html('Uploaded '+fileName);
+			</uploader:onComplete>
+		</uploader:uploader>
+		<div id="statusDiv"></div>
+		%{--<g:select class="form-control" name="attachments" from="${com.topper.books.adbuilder.Attachement.list()}" multiple="multiple" optionKey="id" size="5" value="${templateInstance?.attachments*.id}" class="many-to-many"/>--}%
 		<span class="help-inline">${hasErrors(bean: templateInstance, field: 'attachments', 'error')}</span>
 	</div>
 </div>

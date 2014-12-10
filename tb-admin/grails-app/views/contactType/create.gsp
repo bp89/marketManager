@@ -1,22 +1,20 @@
-<%@ page import="com.topper.books.adbuilder.Template" %>
+<%@ page import="com.topper.books.core.ContactType" %>
 <!DOCTYPE html>
 <html>
 
 <head>
 	<meta name="layout" content="kickstart" />
-	<g:set var="entityName" value="${message(code: 'template.label', default: 'Template')}" />
+	<g:set var="entityName" value="${message(code: 'contactType.label', default: 'ContactType')}" />
 	<title><g:message code="default.create.label" args="[entityName]" /></title>
-	<uploader:head css="/path/to/your.css" />
-	<uploader:head />
 </head>
 
 <body>
 
-	<section id="create-template" class="first">
+	<section id="create-contactType" class="first">
 
-		<g:hasErrors bean="${templateInstance}">
+		<g:hasErrors bean="${contactTypeInstance}">
 		<div class="alert alert-danger">
-			<g:renderErrors bean="${templateInstance}" as="list" />
+			<g:renderErrors bean="${contactTypeInstance}" as="list" />
 		</div>
 		</g:hasErrors>
 

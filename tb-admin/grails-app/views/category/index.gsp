@@ -17,11 +17,19 @@
 		<thead>
 			<tr>
 			
+				<g:sortableColumn property="description" title="${message(code: 'category.description.label', default: 'Description')}" />
+			
+				<g:sortableColumn property="name" title="${message(code: 'category.name.label', default: 'Name')}" />
+			
 			</tr>
 		</thead>
 		<tbody>
 		<g:each in="${categoryInstanceList}" status="i" var="categoryInstance">
 			<tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
+			
+				<td><g:link action="show" id="${categoryInstance.id}">${fieldValue(bean: categoryInstance, field: "description")}</g:link></td>
+			
+				<td>${fieldValue(bean: categoryInstance, field: "name")}</td>
 			
 			</tr>
 		</g:each>

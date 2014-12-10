@@ -1,22 +1,20 @@
-<%@ page import="com.topper.books.adbuilder.Template" %>
+<%@ page import="com.topper.books.core.User" %>
 <!DOCTYPE html>
 <html>
 
 <head>
 	<meta name="layout" content="kickstart" />
-	<g:set var="entityName" value="${message(code: 'template.label', default: 'Template')}" />
+	<g:set var="entityName" value="${message(code: 'user.label', default: 'User')}" />
 	<title><g:message code="default.create.label" args="[entityName]" /></title>
-	<uploader:head css="/path/to/your.css" />
-	<uploader:head />
 </head>
 
 <body>
 
-	<section id="create-template" class="first">
+	<section id="create-user" class="first">
 
-		<g:hasErrors bean="${templateInstance}">
+		<g:hasErrors bean="${userInstance}">
 		<div class="alert alert-danger">
-			<g:renderErrors bean="${templateInstance}" as="list" />
+			<g:renderErrors bean="${userInstance}" as="list" />
 		</div>
 		</g:hasErrors>
 
