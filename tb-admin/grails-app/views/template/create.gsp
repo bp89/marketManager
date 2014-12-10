@@ -6,6 +6,7 @@
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'template.label', default: 'Template')}" />
 	<title><g:message code="default.create.label" args="[entityName]" /></title>
+
 </head>
 
 <body>
@@ -28,7 +29,5 @@
 		</g:form>
 
 	</section>
-
 </body>
-
 </html>

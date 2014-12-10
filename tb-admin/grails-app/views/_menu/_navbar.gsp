@@ -19,7 +19,7 @@
 }
 </style>
 <nav id="Navbar-admin" class="navbar navbar-fixed-top" role="navigation">
-	<div class="fluid">
+	<div class="container">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 				<span class="sr-only">Toggle navigation</span>
@@ -35,15 +35,15 @@
 			</a>
 		</div>
 
-		<div class="navbar-header" >
-			<ul class="nav navbar-nav navbar-right right">
+		<div class="navbar-header pull-right" >
+			<ul class="nav navbar-nav navbar-right ">
 				%{--<g:render template="/_menu/search"/>--}%
 				<g:render template="/_menu/admin"/>
 				%{--<g:render template="/_menu/info"/>--}%
-				<g:render template="/_menu/user"/><!-- NOTE: the renderDialog for the "Register" modal dialog MUST be placed outside the NavBar (at least for Bootstrap 2.1.1): see bottom of main.gsp -->
+				%{--<g:render template="/_menu/user"/><!-- NOTE: the renderDialog for the "Register" modal dialog MUST be placed outside the NavBar (at least for Bootstrap 2.1.1): see bottom of main.gsp -->--}%
 				<g:render template="/_menu/language"/>
 				<li>
-					<a class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#" href="javascript:;">
+					<a class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#" href="${createLink(controller: 'auth',action: 'signOut')}">
 						Logout
 					</a>
 

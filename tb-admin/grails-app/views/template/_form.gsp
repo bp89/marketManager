@@ -1,5 +1,6 @@
 <%@ page import="com.topper.books.adbuilder.Template" %>
 
+<ckeditor:resources/>
 <div class="${hasErrors(bean: templateInstance, field: 'name', 'error')} ">
 	<label for="name" class="control-label"><g:message code="template.name.label" default="Name" /></label>
 	<div>
@@ -19,9 +20,12 @@
 	<div class="${hasErrors(bean: templateInstance, field: 'content', 'error')} ">
 		<label for="content" class="control-label"><g:message code="template.content.label" default="Content" /></label>
 		<div>
-			<textarea class="ckeditor" cols="80"  rows="10" id="content" name="content" >
+			%{--<textarea class="ckeditor" cols="80"  rows="10" id="content" name="content" >--}%
+				%{--${templateInstance?.content}--}%
+			%{--</textarea>--}%
+			<ckeditor:editor name="content" height="400px" width="80%">
 				${templateInstance?.content}
-			</textarea>
+			</ckeditor:editor>
 			<span class="help-inline">${hasErrors(bean: templateInstance, field: 'content', 'error')}</span>
 		</div>
 	</div>
@@ -37,5 +41,4 @@
 </div>
 
 
-<r:require modules="jquery"/>
-<script src="${resource(dir:'js',file: 'ckeditor.js')}"></script>
+

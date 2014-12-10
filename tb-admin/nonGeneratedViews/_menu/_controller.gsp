@@ -47,13 +47,13 @@
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Campaigns<b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li class="controller">
-							<a href="#" >Home</a>
+							<a href="${createLink(controller: 'campaign',action: 'index')}" >Home</a>
 						</li>
 						<li class="controller">
-							<a href="#" >Campaigns</a>
+							<a href="${createLink(controller: 'campaign',action: 'list')}" >Campaigns</a>
 						</li>
 						<li class="controller">
-							<a href="#" >Reports</a>
+							<a href="${createLink(controller: 'campaign',action: 'reports')}" >Reports</a>
 						</li>
 					</ul>
 				</li>
@@ -71,12 +71,12 @@
 							<a href="#" >Compose Mail</a>
 						</li>
 						<li class="controller">
-							<a href="#" >Reports</a>
+							<a href="${createLink(controller: 'contact',action: 'reports')}" >Reports</a>
 						</li>
 					</ul>
 				</li>
 				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Analytics</a>
+					<a class="dropdown-toggle" data-toggle="dropdown" href="${createLink(controller: 'analytics',action: 'show')}">Analytics</a>
 				</li>
 				%{--<g:render template="/_menu/controller"/>--}%
 			</ul>
