@@ -31,10 +31,6 @@ class TemplateController {
         respond new Template(params)
     }
 
-    def preview(Template templateInstance){
-
-        respond templateInstance
-    }
     @Transactional
     def save(Template templateInstance) {
         if (templateInstance == null) {

@@ -62,13 +62,13 @@
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Manager<b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li class="controller">
-							<a href="#" >Home</a>
+							<a href="${createLink(controller: 'contact',action: 'home')}" >Home</a>
 						</li>
 						<li class="controller">
-							<a href="#" >Contacts</a>
+							<a href="${createLink(controller: 'contact',action: 'index')}" >Contacts</a>
 						</li>
 						<li class="controller">
-							<a href="#" >Compose Mail</a>
+							<a href="${createLink(controller: 'ComposeMail',action: 'composeContactMail')}" >Compose Mail</a>
 						</li>
 						<li class="controller">
 							<a href="${createLink(controller: 'contact',action: 'reports')}" >Reports</a>

@@ -7,7 +7,12 @@ class Contact {
     String email
     String organisation
     Address address
+    String phoneNumber
+    ContactType contactType
+    Category category
+    ContactSource contactSource
 
     static constraints = {
+
     }
 }
