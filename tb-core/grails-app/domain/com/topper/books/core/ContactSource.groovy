@@ -1,11 +1,11 @@
 package com.topper.books.core
 
-class Category {
+class ContactSource {
 
     String name
     String description
 
-    static hasMany = [contacts:Contact,subcategories:SubCategory]
+    static  hasMany = [contacts:Contact]
 
     static constraints = {
     }
