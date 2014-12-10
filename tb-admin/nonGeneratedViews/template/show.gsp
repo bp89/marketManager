@@ -32,7 +32,9 @@
 		<tr class="prop">
 			<td valign="top" class="name"><g:message code="template.content.label" default="Content" /></td>
 
-			<td valign="top" class="value">${fieldValue(bean: templateInstance, field: "content")}</td>
+			<td valign="top" class="value">
+				<g:link controller="template" action="preview" params="[id:${templateInstance.id}]">Preview</g:link>
+			</td>
 		</tr>
 
 		<tr class="prop">

@@ -21,7 +21,7 @@
 		<label for="content" class="control-label"><g:message code="template.content.label" default="Content" /></label>
 		<div>
 			%{--<textarea class="ckeditor" cols="80"  rows="10" id="content" name="content" >--}%
-				%{--${templateInstance?.content}--}%
+			%{--${templateInstance?.content}--}%
 			%{--</textarea>--}%
 			<ckeditor:editor name="content" height="400px" width="80%">
 				${templateInstance?.content}
