@@ -6,28 +6,30 @@
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'template.label', default: 'Template')}" />
 	<title><g:message code="default.create.label" args="[entityName]" /></title>
+	<uploader:head css="/path/to/your.css" />
+	<uploader:head />
 </head>
 
 <body>
 
-	<section id="create-template" class="first">
+<section id="create-template" class="first">
 
-		<g:hasErrors bean="${templateInstance}">
+	<g:hasErrors bean="${templateInstance}">
 		<div class="alert alert-danger">
 			<g:renderErrors bean="${templateInstance}" as="list" />
 		</div>
-		</g:hasErrors>
+	</g:hasErrors>
 
-		<g:form action="save" class="form-horizontal" role="form" >
-			<g:render template="form"/>
+	<g:form action="save" class="form-horizontal" role="form" >
+		<g:render template="form"/>
 
-			<div class="form-actions margin-top-medium">
-				<g:submitButton name="create" class="btn btn-primary" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-	            <button class="btn" type="reset"><g:message code="default.button.reset.label" default="Reset" /></button>
-			</div>
-		</g:form>
+		<div class="form-actions margin-top-medium">
+			<g:submitButton name="create" class="btn btn-primary" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+			<button class="btn" type="reset"><g:message code="default.button.reset.label" default="Reset" /></button>
+		</div>
+	</g:form>
 
-	</section>
+</section>
 
 </body>
 

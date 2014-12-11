@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/tb-admin.iml" filepath="$PROJECT_DIR$/tb-admin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tb-admin.iml" filepath="$PROJECT_DIR$/tb-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/tb-admin-grailsPlugins.iml" filepath="$PROJECT_DIR$/tb-admin-grailsPlugins.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tbCore-inplacePlugin.iml" filepath="$PROJECT_DIR$/tbCore-inplacePlugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/tbCore-inplacePlugin.iml" filepath="$PROJECT_DIR$/tbCore-inplacePlugin.iml" />
     </modules>
   </component>
