@@ -29,7 +29,7 @@
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Ad Builder<b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li class="controller">
-							<a href="#" >Home</a>
+							<a href="${createLink(controller:'template',action: 'home')}" >Home</a>
 						</li>
 						<li class="controller">
 							<a href="${createLink(controller:'template',action: 'index')}" >Templates</a>
@@ -47,7 +47,7 @@
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Campaigns<b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li class="controller">
-							<a href="${createLink(controller: 'campaign',action: 'index')}" >Home</a>
+							<a href="${createLink(controller: 'campaign',action: 'home')}" >Home</a>
 						</li>
 						<li class="controller">
 							<a href="${createLink(controller: 'campaign',action: 'list')}" >Campaigns</a>

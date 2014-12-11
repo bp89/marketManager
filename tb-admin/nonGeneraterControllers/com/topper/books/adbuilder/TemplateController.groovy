@@ -13,21 +13,20 @@ class TemplateController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-	def index(Integer max) {
+    def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Template.list(params), model:[templateInstanceCount: Template.count()]
     }
 
-	def list(Integer max) {
+    def home(){
+        render view: 'home'
+    }
+    def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Template.list(params), model:[templateInstanceCount: Template.count()]
     }
 
     def show(Template templateInstance) {
-        respond templateInstance
-    }
-
-    def preview(Template templateInstance) {
         respond templateInstance
     }
 

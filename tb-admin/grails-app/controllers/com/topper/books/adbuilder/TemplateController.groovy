@@ -18,6 +18,9 @@ class TemplateController {
         respond Template.list(params), model:[templateInstanceCount: Template.count()]
     }
 
+    def home(){
+        render view: 'home'
+    }
 	def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Template.list(params), model:[templateInstanceCount: Template.count()]
