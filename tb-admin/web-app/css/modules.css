@@ -1,0 +1,109 @@
+/*!
+ * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    overflow-x: hidden;
+    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+.text-primary {
+    color: #fed136;
+}
+
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    outline: 0;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+    color: #fec503;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+
+.btn-primary-admin {
+    border-color: #fed136;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background-color: #fed136;
+}
+
+.btn-primary-admin:hover,
+.btn-primary-admin:focus,
+.btn-primary-admin:active,
+.btn-primary-admin.active,
+.open .dropdown-toggle.btn-primary-admin {
+    border-color: #f6bf01;
+    color: #fff;
+    background-color: #fec503;
+}
+
+.btn-primary-admin:active,
+.btn-primary-admin.active,
+.open .dropdown-toggle.btn-primary-admin {
+    background-image: none;
+}
+
+.btn-primary-admin.disabled,
+.btn-primary-admin[disabled],
+fieldset[disabled] .btn-primary-admin,
+.btn-primary-admin.disabled:hover,
+.btn-primary-admin[disabled]:hover,
+fieldset[disabled] .btn-primary-admin:hover,
+.btn-primary-admin.disabled:focus,
+.btn-primary-admin[disabled]:focus,
+fieldset[disabled] .btn-primary-admin:focus,
+.btn-primary-admin.disabled:active,
+.btn-primary-admin[disabled]:active,
+fieldset[disabled] .btn-primary-admin:active,
+.btn-primary-admin.disabled.active,
+.btn-primary-admin[disabled].active,
+fieldset[disabled] .btn-primary-admin.active {
+    border-color: #fed136;
+    background-color: #fed136;
+}
+
+.btn-primary-admin .badge {
+    color: #fed136;
+    background-color: #fff;
+}
+
+#modules .modules-item {
+    right: 0;
+    margin: 7.5px 0 10px 0px;
+}
+
+
+.bigBorder{
+    -moz-box-shadow: 0 0 6px black;
+    -webkit-box-shadow: 0 0 6px black;
+    box-shadow: 0 0 6px #f7685b;
+    border-radius: 4px 4px ;
+}
+
+.smallBorder {
+    border: 1px solid #ccc;
+}
