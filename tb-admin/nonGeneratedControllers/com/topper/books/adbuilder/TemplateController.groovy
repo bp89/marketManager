@@ -30,6 +30,11 @@ class TemplateController {
         respond templateInstance
     }
 
+    def preview(Template templateInstance) {
+        respond templateInstance
+    }
+
+
     def create() {
         respond new Template(params)
     }
