@@ -139,6 +139,17 @@ grails.resources.modules = {
         resource url: '/css/colorbox.css'
     }
 
+    angular{
+        dependsOn 'jquery'
+        resource url:'/js/angular.min.js'
+    }
+
+    bootstrap{
+        dependsOn 'jquery'
+        resource url:'/js/bootstrap.js'
+        resource url:'/css/bootstrap.css'
+    }
+
 }
 
 imageUpload {

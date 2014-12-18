@@ -9,18 +9,16 @@
 	<meta name="viewport"		content="width=device-width, initial-scale=1.0">
 	<meta name="description"	content="">
 	<meta name="author"			content="">
-
 	<link rel="shortcut icon"		href="${resource(dir:'images',file:'favicon.ico')}" type="image/x-icon" />
-
 	<link rel="apple-touch-icon"	href="assets/ico/apple-touch-icon.png">
 	<link rel="apple-touch-icon"	href="assets/ico/apple-touch-icon-72x72.png"	sizes="72x72">
 	<link rel="apple-touch-icon"	href="assets/ico/apple-touch-icon-114x114.png"	sizes="114x114">
 
 	<%-- Manual switch for the skin can be found in /view/_menu/_config.gsp --%>
-	<r:require modules="jquery"/> <%-- jQuery is required for Bootstrap! --%>
+	%{--<r:require modules="jquery"/> <%-- jQuery is required for Bootstrap! --%>--}%
 	<r:require modules="bootstrap"/>
 	<r:require modules="bootstrap_utils"/>
-
+	<r:require module="angular"/>
 	<r:layoutResources />
 	<g:layoutHead />
 
