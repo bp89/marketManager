@@ -80,7 +80,7 @@ grails.project.dependency.resolution = {
         //compile ":handlebars-asset-pipeline:1.3.0.1"
         compile ":kickstart-with-bootstrap:1.1.0"
         compile ":ckeditor:4.4.1.0"
-        compile ":ajax-uploader:1.1"
+//        compile ":ajax-uploader:1.1"
 
     }
 }

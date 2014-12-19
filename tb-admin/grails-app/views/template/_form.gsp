@@ -55,7 +55,8 @@
 <!-- The file upload form used as target for the file upload widget -->
 	<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
 	<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-	<div class="row fileupload-buttonbar">
+<div class="${hasErrors(bean: templateInstance, field: 'subject', 'error')}">
+	<div class=" row fileupload-buttonbar" >
 		<div class="col-lg-7">
 			<!-- The fileinput-button span is used to style the file input field as button -->
 			<span class="btn btn-success fileinput-button" >
@@ -121,10 +122,8 @@
 			</td>
 		</tr>
 	</table>
-
-<br>
-
 </div>
+
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
 <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
 <script src="../js/vendor/jquery.ui.widget.js"></script>
@@ -132,8 +131,6 @@
 <script src="http://blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
 <!-- The Canvas to Blob plugin is included for image resizing functionality -->
 <script src="http://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
-<!-- Bootstrap JS is not required, but included for the responsive demo navigation -->
-%{--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>--}%
 <!-- blueimp Gallery script -->
 <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
 <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
