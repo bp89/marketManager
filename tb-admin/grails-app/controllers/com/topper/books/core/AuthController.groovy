@@ -38,6 +38,7 @@ class AuthController {
             // Perform the actual login. An AuthenticationException
             // will be thrown if the username is unrecognised or the
             // password is incorrect.
+
             SecurityUtils.subject.login(authToken)
             println '-----------coming in here'
             log.info "Redirecting to '${targetUri}'."

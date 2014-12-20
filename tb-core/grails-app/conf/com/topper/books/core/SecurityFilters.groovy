@@ -14,7 +14,7 @@ class SecurityFilters {
                 }
 
                 // Access control by convention.
-               // accessControl()
+               accessControl(auth:false)
             }
         }
     }

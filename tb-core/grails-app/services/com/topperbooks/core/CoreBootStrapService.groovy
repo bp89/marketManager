@@ -21,7 +21,7 @@ class CoreBootStrapService {
 
         user.username = 'admin'
         user.passwordHash = 'admin'
-        user.permissions = ['*.*']
+        user.permissions = ['*:*']
 
         user.validate()
 
