@@ -1,2 +1,0 @@
-
-${raw(templateInstance.content)}

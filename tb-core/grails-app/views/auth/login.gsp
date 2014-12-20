@@ -64,7 +64,7 @@
             <g:textField name="username" id="username" placeholder="User Name" class="form-control input-lg" title="Please enter User Name." required="" value="${username}"/>
           </div>
           <div class="form-group">
-            <g:passwordField name="passwordHash"  id="passwordHash"  placeholder="Password" class="form-control input-lg" title="Please enter Password." />
+            <g:passwordField name="password"  id="password"  placeholder="Password" class="form-control input-lg" title="Please enter Password." />
           </div>
           <div class="form-group">
             <input type="checkbox" name="rememberMe" value="${rememberMe}"/>

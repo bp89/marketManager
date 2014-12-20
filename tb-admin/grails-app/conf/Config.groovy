@@ -151,7 +151,3 @@ grails.resources.modules = {
     }
 
 }
-
-imageUpload {
-    temporaryFile = '/home/prajapati/Documents/tb-admin.file' // Path to where files will be uploaded
-}

@@ -31,7 +31,7 @@ class CoreBootStrapService {
             user.save flush: true
         }
 
-         user = new User(username: "user123", passwordHash: new Sha256Hash("password").toHex())
+        user = new User(username: "user123", passwordHash: "password")
         user.addToPermissions("*:*")
         user.save flush: true
 

@@ -26,8 +26,7 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 
-    debug 'com.odobo',
-            "grails.app.filters",
+    debug   "grails.app.filters",
             "grails.app.controllers",
             "grails.app.services",
             "grails.app.domains",

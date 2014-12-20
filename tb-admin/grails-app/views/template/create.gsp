@@ -21,7 +21,7 @@
 	</g:hasErrors>
 
 %{--<g:form action="save" class="form-horizontal" role="form" >--}%
-	<form id="fileupload" class="form-horizontal" action="save" method="POST" enctype="multipart/form-data" data-ng-app="demo" data-ng-controller="DemoFileUploadController" data-file-upload="options" data-ng-class="{'fileupload-processing': processing() || loadingFiles}">
+	<form id="fileupload" action="save" method="POST" enctype="multipart/form-data" data-ng-app="demo" data-ng-controller="DemoFileUploadController" data-file-upload="options" data-ng-class="{'fileupload-processing': processing() || loadingFiles}">
 		<g:render template="form"/>
 
 		<div class="form-actions margin-top-medium">
