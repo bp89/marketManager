@@ -43,7 +43,7 @@
 				%{--<g:render template="/_menu/user"/><!-- NOTE: the renderDialog for the "Register" modal dialog MUST be placed outside the NavBar (at least for Bootstrap 2.1.1): see bottom of main.gsp -->--}%
 				<g:render template="/_menu/language"/>
 				<li>
-					<a class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#" href="${createLink(controller: 'auth',action: 'signOut')}">
+					<a href="${createLink(controller: 'auth',action: 'signOut')}">
 						Logout
 					</a>
 

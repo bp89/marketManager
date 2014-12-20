@@ -1,5 +1,5 @@
 <li class="controller">
-	<a class="dropdown-toggle" href="${createLink(controller: 'admin',action:'modules')}">
+	<a  href="${createLink(controller: 'admin',action:'modules')}">
 		%{--<i class="glyphicon glyphicon-wrench"></i>--}%
 		<img src="${resource(dir: 'images',file: 'Settings-icon.png')}" width="25px" height="25px">
 		<g:message code="default.admin.label"/>
