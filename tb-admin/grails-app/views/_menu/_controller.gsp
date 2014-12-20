@@ -1,8 +1,18 @@
+<style>
+.open>.dropdown-menu{
+	z-index: 100;
+	border-radius: 0;
 
+	display:inline-flex
+}
+</style>
 <nav id="Navbar" class="navbar" role="navigation" >
-	<div class="container-fluid">
+	<div class="container">
 		<div class="collapse navbar-collapse navbar-ex1-collapse" role="navigation">
 			<ul class="nav navbar-nav">
+				<li>
+					<a href="${createLink(controller: 'home',action:'index')}">Home</a>
+				</li>
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Ad Builder<b class="caret"></b></a>
 					<ul class="dropdown-menu">
