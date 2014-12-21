@@ -63,6 +63,7 @@
             <div class="col-md-5 col-sm-3 modules-item contacts smallBorder">
                 <a href = "#"><h4>Ad Builder</h4></a>
                 <ul class="list-unstyled">
+                    <a href = "${createLink(controller: 'directory',action: 'index')}"><li> - Manage Resources</li></a>
                     <a href = "#"><li> - Configure Display Settings</li></a>
                     <a href = "#"><li> - Configure Base Fields</li></a>
                 </ul>
