@@ -10,10 +10,36 @@ import grails.transaction.Transactional
  */
 @Transactional(readOnly = true)
 class ContactSourceController {
-
+    def l =[]
+    def count
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
 	def index(Integer max) {
+        count = session.getAttribute('counter')
+
+        if(count>1)
+        {
+            l = session.getAttribute('cNames')
+
+
+            int size = l.size()
+            for(int i=2;i<size;i++)
+            {
+                l.remove(i)
+                count--
+            }
+            session.setAttribute('counter',count)
+            session.setAttribute('cNames',l)
+        }
+        if(count==1) {
+            l = session.getAttribute('cNames')
+
+
+            l.add(1, controllerName)
+            session.setAttribute('cNames', l)
+            count++
+            session.setAttribute('counter',count)
+        }
         params.max = Math.min(max ?: 10, 100)
         respond ContactSource.list(params), model:[contactSourceInstanceCount: ContactSource.count()]
     }

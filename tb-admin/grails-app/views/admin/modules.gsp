@@ -34,7 +34,6 @@
 </head>
 <body>
 
-<!-- Modules Grid Section -->
 <div id="modules">
     <div class="container-fluid col-lg-12 text-left ">
 

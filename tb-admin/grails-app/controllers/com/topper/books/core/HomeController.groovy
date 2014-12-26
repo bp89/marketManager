@@ -7,7 +7,18 @@ package com.topper.books.core
 class HomeController {
 
     static scaffold = true
-	def index = {
-    render  view: 'index'
+
+    int count =0
+
+
+    def index = {
+
+        if(session.getAttribute('counter')==null)
+                {
+                    session.setAttribute('counter',count)
+                }
+
+
+       render  (view: 'index')
     }
 }

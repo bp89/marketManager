@@ -7,8 +7,39 @@ package com.topper.books.admin
 class AdminController {
 
     static scaffold = true
+    int count
 
+    def l = []
     def modules(){
+
+       count = session.getAttribute('counter')
+
+       if(count>1)
+        {
+            l = session.getAttribute('cNames')
+
+            int size = l.size()
+            for(int i=1;i<size;i++)
+            {
+                l.remove(i)
+                count--
+            }
+            session.setAttribute('counter',count)
+            session.setAttribute('cNames',l)
+        }
+        println(l)
+        if(count==0) {
+
+
+            l.add(0, controllerName)
+            session.setAttribute('cNames', l)
+            count++
+            session.setAttribute('counter',count)
+
+        }
+
+
+
         render (view: 'modules')
     }
 

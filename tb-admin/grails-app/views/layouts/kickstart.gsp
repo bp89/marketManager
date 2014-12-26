@@ -32,6 +32,10 @@
 
 <body>
 <g:render template="/_menu/navbar"/>
+<g:render template="/_menu/breadcrumb"/>
+
+
+
 
 <!-- Enable to overwrite Header by individual page -->
 %{--<g:if test="${ pageProperty(name:'page.header') }">--}%

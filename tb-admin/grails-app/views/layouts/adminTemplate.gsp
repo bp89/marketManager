@@ -31,7 +31,9 @@
 </head>
 
 <body>
+
 <g:render template="/_menu/navbar"/>
+<g:render template="/_menu/breadcrumb"/>
 
 <div class="container-fluid" style="width: 98%;margin: 10px;">
 	<div class="btn-toolbar">
