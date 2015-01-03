@@ -20,6 +20,9 @@
 							<a href="${createLink(controller:'template',action: 'home')}" >Home</a>
 						</li>
 						<li class="controller">
+							<a href="${createLink(controller:'template',action: 'index')}" >Resources</a>
+						</li>
+						<li class="controller">
 							<a href="${createLink(controller:'template',action: 'index')}" >Templates</a>
 						</li>
 						<li class="controller">
