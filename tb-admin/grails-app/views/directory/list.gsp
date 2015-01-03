@@ -60,7 +60,7 @@
 					id:id
 				},
 				function(data){
-					alert("Data: " + data + "\nStatus: " + status);
+					alert("hello");
 				});
 	}
 </script>
