@@ -1,4 +1,4 @@
-<%@ page import="com.topper.books.core.Campaign" %>
+<%@ page import="com.topper.books.campaign.Campaign" %>
 <!DOCTYPE html>
 <html>
 
@@ -19,11 +19,20 @@
 		</g:hasErrors>
 
 		<g:form action="save" class="form-horizontal" role="form" >
-			<g:render template="form"/>
+			%{--<g:render template="form"/>--}%
+            <g:render template="customForm"/>
+           <label for="contacts">Associate Contacts</label>
+          %{--  <g:textField class="form-control" name="contacts" value=""/>--}%
+            <g:select name="contacts"  multiple="multiple"
+                      from="${com.topper.books.core.Contact.list()}"
+                      optionKey="id"
+                      optionValue="email"
+                      noSelection="${['null':'Please Choose.....']}" />
 
 			<div class="form-actions margin-top-medium">
 				<g:submitButton name="create" class="btn btn-primary" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-	            <button class="btn" type="reset"><g:message code="default.button.reset.label" default="Reset" /></button>
+
+	             <button class="btn" type="reset"><g:message code="default.button.reset.label" default="Reset" /></button>
 			</div>
 		</g:form>
 

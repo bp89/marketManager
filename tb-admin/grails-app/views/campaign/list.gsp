@@ -1,5 +1,5 @@
 
-<%@ page import="com.topper.books.core.Campaign" %>
+<%@ page import="com.topper.books.campaign.Campaign" %>
 <!DOCTYPE html>
 <html>
 
@@ -16,20 +16,32 @@
 	<table class="table table-bordered margin-top-medium">
 		<thead>
 			<tr>
+                <g:sortableColumn property="name" title="${message(code: 'campaign.name.label', default: 'Name')}" />
+                <g:sortableColumn property="type" title="${message(code: 'campaign.type.label', default: 'Type')}" />
+                <g:sortableColumn property="subject" title="${message(code: 'campaign.subject.label', default: 'Subject')}" />
+				<g:sortableColumn property="content" title="${message(code: 'campaign.content.label', default: 'Content')}" />
 			
-				<g:sortableColumn property="name" title="${message(code: 'campaign.name.label', default: 'Name')}" />
+
 			
-				<g:sortableColumn property="type" title="${message(code: 'campaign.type.label', default: 'Type')}" />
+
+			
+
 			
 			</tr>
 		</thead>
 		<tbody>
 		<g:each in="${campaignInstanceList}" status="i" var="campaignInstance">
 			<tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
+                <td><g:link action="show" id="${campaignInstance.id}">${fieldValue(bean: campaignInstance, field: "name")}</g:link></td>
+                <td>${fieldValue(bean: campaignInstance, field: "type")}</td>
+                <td>${fieldValue(bean: campaignInstance, field: "subject")}</td>
+				<td>${fieldValue(bean: campaignInstance, field: "content")}</td>
 			
-				<td><g:link action="show" id="${campaignInstance.id}">${fieldValue(bean: campaignInstance, field: "name")}</g:link></td>
+
 			
-				<td>${fieldValue(bean: campaignInstance, field: "type")}</td>
+
+			
+
 			
 			</tr>
 		</g:each>
