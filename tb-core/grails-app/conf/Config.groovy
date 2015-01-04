@@ -36,6 +36,7 @@ log4j = {
 }
 
 grails {
+
     mail {
         host = "smtp.gmail.com"
         port = 465
@@ -46,7 +47,6 @@ grails {
                  "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
                  "mail.smtp.socketFactory.fallback":"false"]
     }
-
 }
 grails.mail.default.from="softiventure@gmail.com"
 //grails.mail.disabled=true

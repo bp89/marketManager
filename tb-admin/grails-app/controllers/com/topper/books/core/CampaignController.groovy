@@ -1,5 +1,6 @@
 package com.topper.books.core
 
+import com.topper.books.campaign.Campaign
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional

@@ -12,16 +12,6 @@ import grails.transaction.Transactional
 class CampaignController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-    def mailSender(){
-        println(params.contacts)
-        sendMail {
-             to params.contacts
-             subject params.subject
-             body params.content
-
-         }
-
-    }
 
 	def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -54,7 +44,7 @@ class CampaignController {
         }
 
         campaignInstance.save flush:true
-         mailSender()
+
         request.withFormat {
             form {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'campaignInstance.label', default: 'Campaign'), campaignInstance.id])

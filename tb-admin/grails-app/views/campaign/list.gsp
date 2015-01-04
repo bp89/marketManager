@@ -19,14 +19,7 @@
                 <g:sortableColumn property="name" title="${message(code: 'campaign.name.label', default: 'Name')}" />
                 <g:sortableColumn property="type" title="${message(code: 'campaign.type.label', default: 'Type')}" />
                 <g:sortableColumn property="subject" title="${message(code: 'campaign.subject.label', default: 'Subject')}" />
-				<g:sortableColumn property="content" title="${message(code: 'campaign.content.label', default: 'Content')}" />
-			
-
-			
-
-			
-
-			
+				<td>Action</td>
 			</tr>
 		</thead>
 		<tbody>
@@ -35,14 +28,7 @@
                 <td><g:link action="show" id="${campaignInstance.id}">${fieldValue(bean: campaignInstance, field: "name")}</g:link></td>
                 <td>${fieldValue(bean: campaignInstance, field: "type")}</td>
                 <td>${fieldValue(bean: campaignInstance, field: "subject")}</td>
-				<td>${fieldValue(bean: campaignInstance, field: "content")}</td>
-			
-
-			
-
-			
-
-			
+				<td><a href="">Associate Contacts</a></td>
 			</tr>
 		</g:each>
 		</tbody>
