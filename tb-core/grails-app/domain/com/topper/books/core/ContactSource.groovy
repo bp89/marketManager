@@ -4,6 +4,7 @@ class ContactSource {
 
     String name
     String description
+    int sequence
 
     static  hasMany = [contacts:Contact]
 

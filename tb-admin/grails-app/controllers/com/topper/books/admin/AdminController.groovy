@@ -12,7 +12,7 @@ class AdminController {
     def l = []
     def modules(){
 
-       count = session.getAttribute('counter')
+       count = session.getAttribute('counter')?:0
 
        if(count>1)
         {
@@ -27,7 +27,6 @@ class AdminController {
             session.setAttribute('counter',count)
             session.setAttribute('cNames',l)
         }
-        println(l)
         if(count==0) {
 
 

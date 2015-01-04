@@ -6,6 +6,8 @@ class BootStrap {
     def init = { servletContext ->
 
         coreBootStrapService.createAdminUser()
+        coreBootStrapService.populateContactCategory()
+        coreBootStrapService.populateContactSource()
 //        mailService.sendMail {
 //            from 'banti.prajapati@intelligrape.com'
 //            to 'bantipotter@gmail.com'

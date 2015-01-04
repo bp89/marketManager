@@ -8,20 +8,18 @@ import grails.transaction.Transactional
  * ContactSourceController
  * A controller class handles incoming web requests and performs actions such as redirects, rendering views and so on.
  */
-@Transactional(readOnly = true)
+@Transactional
 class ContactSourceController {
     def l =[]
     def count
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-	def index(Integer max) {
+    def index(Integer max) {
         count = session.getAttribute('counter')
 
         if(count>1)
         {
             l = session.getAttribute('cNames')
-
-
             int size = l.size()
             for(int i=2;i<size;i++)
             {
@@ -33,18 +31,18 @@ class ContactSourceController {
         }
         if(count==1) {
             l = session.getAttribute('cNames')
-
-
             l.add(1, controllerName)
             session.setAttribute('cNames', l)
             count++
             session.setAttribute('counter',count)
         }
+
         params.max = Math.min(max ?: 10, 100)
+        params.sort = 'sequence'
         respond ContactSource.list(params), model:[contactSourceInstanceCount: ContactSource.count()]
     }
 
-	def list(Integer max) {
+    def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond ContactSource.list(params), model:[contactSourceInstanceCount: ContactSource.count()]
     }
@@ -134,5 +132,15 @@ class ContactSourceController {
             }
             '*'{ render status: NOT_FOUND }
         }
+    }
+
+
+    def doOrder(){
+        List<ContactSource> contactSources =  ContactSource.findAll()
+        contactSources.each{ContactSource contactSource ->
+            contactSource.sequence = Integer.parseInt(params.get('sequence_'+contactSource.id))
+            contactSource.save flush: true
+        }
+        return true
     }
 }
