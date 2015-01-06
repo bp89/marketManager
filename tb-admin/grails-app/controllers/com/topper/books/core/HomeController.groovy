@@ -8,17 +8,11 @@ class HomeController {
 
     static scaffold = true
 
-    int count =0
+
 
 
     def index = {
 
-        if(session.getAttribute('counter')==null)
-                {
-                    session.setAttribute('counter',count)
-                }
-
-
-       render  (view: 'index')
+        render  (view: 'index')
     }
 }

@@ -74,7 +74,7 @@
             <div class="col-md-5 col-sm-3 modules-item contacts smallBorder">
                 <a href = "#"><h4>Contacts</h4></a>
                 <ul class="list-unstyled">
-                    <a href = "${createLink(controller: 'contactSource' , action: 'index')}"><li> - Configure Contact Category</li></a>
+                    <a href = "${createLink(controller: 'category' , action: 'index')}"><li> - Configure Contact Category</li></a>
                     <a href = "${createLink(controller: 'contactType' , action: 'index')}"><li> - Configure Contact Type</li></a>
                     <a href = "${createLink(controller: 'contactSource' , action: 'index')}"><li> - Configure Contact Source</li></a>
                     <a href = "${createLink(controller: 'contactSource' , action: 'index')}"><li> - Configure Custom Contact Fields</li></a>

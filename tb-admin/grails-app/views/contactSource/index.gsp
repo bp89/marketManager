@@ -19,6 +19,7 @@
 <body>
 
 <section id="index-contactSource" class="first">
+
 	<g:form name="orderFrom" id="orderForm" controller="contactSource" action="doOrder">
 		<table class="table table-bordered margin-top-medium sorted_table">
 			<thead>
@@ -43,6 +44,7 @@
 			</tbody>
 		</table>
 	</g:form>
+
 	<div>
 		<bs:paginate total="${contactSourceInstanceCount}" />
 	</div>

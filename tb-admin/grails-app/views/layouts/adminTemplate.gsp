@@ -33,7 +33,13 @@
 <body>
 
 <g:render template="/_menu/navbar"/>
-<g:render template="/_menu/breadcrumb"/>
+<ol class="breadcrumb">
+
+
+        <li><a href = "${createLink(controller: 'admin' , action: 'modules')}">Admin</a></li>
+
+</ol>
+%{--<g:render template="/_menu/breadcrumb"/>--}%
 
 <div class="container-fluid" style="width: 98%;margin: 10px;">
 	<div class="btn-toolbar">

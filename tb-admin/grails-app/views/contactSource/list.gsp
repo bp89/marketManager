@@ -1,5 +1,6 @@
 
 <%@ page import="com.topper.books.core.ContactSource" %>
+
 <!DOCTYPE html>
 <html>
 
@@ -35,6 +36,7 @@
 		</g:each>
 		</tbody>
 	</table>
+
 	<div>
 		<bs:paginate total="${contactSourceInstanceCount}" />
 	</div>

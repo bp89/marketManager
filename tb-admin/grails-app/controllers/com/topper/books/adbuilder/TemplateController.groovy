@@ -14,6 +14,8 @@ class TemplateController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
+        session.setAttribute('cName',controllerName)
+        session.setAttribute('aName',actionName)
         params.max = Math.min(max ?: 10, 100)
         respond Template.list(params), model:[templateInstanceCount: Template.count()]
     }
@@ -22,6 +24,8 @@ class TemplateController {
         render view: 'home'
     }
     def list(Integer max) {
+        session.setAttribute('cName',controllerName)
+        session.setAttribute('aName',actionName)
         params.max = Math.min(max ?: 10, 100)
         respond Template.list(params), model:[templateInstanceCount: Template.count()]
     }
@@ -36,6 +40,8 @@ class TemplateController {
 
 
     def create() {
+        session.setAttribute('cName',controllerName)
+        session.setAttribute('aName',actionName)
         respond new Template(params)
     }
 

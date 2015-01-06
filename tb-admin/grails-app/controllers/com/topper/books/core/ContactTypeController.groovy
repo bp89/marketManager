@@ -11,41 +11,21 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 
 class ContactTypeController {
-    def l =[]
-def count
+
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
 	def index(Integer max) {
-       count = session.getAttribute('counter')
+        session.setAttribute('cName',controllerName)
+        session.setAttribute('aName',actionName)
 
-        if(count>1)
-        {
-            l = session.getAttribute('cNames')
-
-
-            int size = l.size()
-            for(int i=2;i<size;i++)
-            {
-                l.remove(i)
-                count--
-            }
-            session.setAttribute('counter',count)
-            session.setAttribute('cNames',l)
-        }
-        if(count==1) {
-            l = session.getAttribute('cNames')
-
-
-            l.add(1, controllerName)
-            session.setAttribute('cNames', l)
-            count++
-            session.setAttribute('counter',count)
-        }
         params.max = Math.min(max ?: 10, 100)
+     //  params.sort = 'sequence'
         respond ContactType.list(params), model:[contactTypeInstanceCount: ContactType.count()]
     }
 
 	def list(Integer max) {
+        session.setAttribute('cName',controllerName)
+        session.setAttribute('aName',actionName)
         params.max = Math.min(max ?: 10, 100)
         respond ContactType.list(params), model:[contactTypeInstanceCount: ContactType.count()]
     }
@@ -55,6 +35,8 @@ def count
     }
 
     def create() {
+        session.setAttribute('cName',controllerName)
+        session.setAttribute('aName',actionName)
         respond new ContactType(params)
     }
 
@@ -136,4 +118,13 @@ def count
             '*'{ render status: NOT_FOUND }
         }
     }
+
+    /*def doOrder(){
+        List<ContactType> contactTypes =  ContactType.findAll()
+        contactTypes.each{ContactType contactType ->
+            contactType.sequence = Integer.parseInt(params.get('sequence_'+contactType.id))
+            contactType.save flush: true
+        }
+        return true
+    }*/
 }

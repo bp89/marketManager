@@ -1,16 +1,26 @@
+<g:if test="${session.getAttribute('cName') == 'contactSource'}">
+    <g:if test="${(session.getAttribute('aName') == 'index') || (session.getAttribute('aName') == 'list')}">
 
-<ol class="breadcrumb">
-    <li><a href="${createLink(controller: 'home',action:'index')}">Home</a></li>
-    <g:each in="${session.getAttribute('cNames')}" var="cl">
-        <% if(cl.equals('admin')){%>
+    <g:render template="/_menu/breadcrumbContactSourceIndex"/>
+</g:if>
+    <g:else>
+        <g:render template="/_menu/breadcrumbContactSourceCreate"/>
+    </g:else>
+    </g:if>
+<g:elseif test="${session.getAttribute('cName') == 'contactType'}">
+<g:if test="${(session.getAttribute('aName') == 'index') || (session.getAttribute('aName') == 'list')}">
 
-
-        <li><a href = "${createLink(controller: cl , action: 'modules')}">${cl}</a></li>
-        <% }
-        else { %>
-        <li><a href = "${createLink(controller: cl , action: 'index')}">${cl}</a></li>
-
-        <%}%>
-    </g:each>
-
-</ol>
+        <g:render template="/_menu/breadcrumbContactTypeIndex"/>
+    </g:if>
+    <g:else>
+        <g:render template="/_menu/breadcrumbContactTypeCreate"/>
+    </g:else>
+</g:elseif>
+<g:elseif test="${session.getAttribute('cName') == 'template'}">
+    <g:if test="${(session.getAttribute('aName') == 'index') || (session.getAttribute('aName') == 'list')}">
+        <g:render template="/_menu/breadcrumbAdBuilderTemplateIndex"/>
+    </g:if>
+    <g:else>
+        <g:render template="/_menu/breadcrumbAdBuilderTemplateCreate"/>
+    </g:else>
+</g:elseif>
