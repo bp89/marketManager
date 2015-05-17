@@ -13,6 +13,12 @@ class ContactController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+
+    def calendar(){
+
+
+    }
+
 	def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Contact.list(params), model:[contactInstanceCount: Contact.count()]

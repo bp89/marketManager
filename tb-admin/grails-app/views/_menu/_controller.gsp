@@ -58,6 +58,11 @@
 						<li class="controller">
 							<a href="${createLink(controller: 'contact',action: 'index')}" >Contacts</a>
 						</li>
+
+						<li class="controller">
+							<a href="${createLink(controller: 'contact',action: 'calendar')}" >Calendar</a>
+						</li>
+
 						<li class="controller">
 							<a href="${createLink(controller: 'ComposeMail',action: 'composeContactMail')}" >Compose Mail</a>
 						</li>

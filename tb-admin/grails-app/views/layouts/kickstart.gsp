@@ -18,7 +18,6 @@
 	%{--<r:require modules="jquery"/> <%-- jQuery is required for Bootstrap! --%>--}%
 	<r:require modules="bootstrap"/>
 	<r:require modules="bootstrap_utils"/>
-	<r:require module="angular"/>
 	<r:layoutResources />
 	<g:layoutHead />
 
