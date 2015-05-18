@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
@@ -11,10 +10,7 @@
     <link href='${resource(dir: 'css',file: 'fullcalendar.print.css')}' rel='stylesheet' media='print' />
 </head>
 <body>
-
 <div id='calendar'></div>
-
-
 <script>
     var jq = jq?jq: $.noConflict();
     jq(document).ready(function() {
